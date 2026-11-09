@@ -9,6 +9,12 @@ The notebooks analyse all-atom molecular dynamics simulations of the tau-K32 fra
 post-translational modification (PTM) states, as isolated chains and in 60-chain condensates,
 and the tau-K18 force-field benchmark.
 
+![Snapshots of 60-chain tau-K32 condensates for the seven modification states](images/condensate_slabs.png)
+
+*Representative snapshots of 60-chain tau-K32 condensates for the seven modification states. Rectangles
+mark the initial slab boundary. The fully phosphorylated and fully acetylated condensates contract into
+denser, narrower slabs, whereas the unmodified and sparsely modified condensates extend beyond it.*
+
 ## Notebooks
 
 | Notebook | What it analyses |
