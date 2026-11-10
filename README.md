@@ -19,10 +19,10 @@ denser, narrower slabs, whereas the unmodified and sparsely modified condensates
 
 | Notebook | What it analyses |
 |---|---|
-| `single_chain_analysis_all_reps.ipynb` | Single-chain tau-K32: charge, radius of gyration, salt bridges, contacts, secondary structure, convergence |
-| `condensate_analysis_all_reps.ipynb` | 60-chain condensates: density profiles, interchain and intrachain contacts, contact coupling, secondary structure, slab radius of gyration |
-| `ff_comaparison.ipynb` | Force-field benchmark on tau-K18: radius of gyration, SAXS, residual dipolar couplings (RDCs) |
-| `HCG_v_MD.ipynb` | Hierarchical chain growth (HCG) structures compared with MD |
+| `analysis_files/single_chain_analysis_all_reps.ipynb` | Single-chain tau-K32: charge, radius of gyration, salt bridges, contacts, secondary structure, convergence |
+| `analysis_files/condensate_analysis_all_reps.ipynb` | 60-chain condensates: density profiles, interchain and intrachain contacts, contact coupling, secondary structure, slab radius of gyration |
+| `analysis_files/ff_comaparison.ipynb` | Force-field benchmark on tau-K18: radius of gyration, SAXS, residual dipolar couplings (RDCs) |
+| `analysis_files/HCG_v_MD.ipynb` | Hierarchical chain growth (HCG) structures compared with MD |
 
 ## Requirements
 
