@@ -1,6 +1,6 @@
-# Tau PTM simulations: analysis notebooks
+# Tau PTM simulations
 
-Analysis code for the manuscript:
+Simulation inputs and analysis code for the manuscript:
 
 > **Tau phosphorylation and acetylation shift the balance between intramolecular and intermolecular interactions in condensates**
 > Adelie Louet, Jan F. M. Stuke, Lisa M. Pietrek, Michele Vendruscolo, Gerhard Hummer
@@ -14,6 +14,42 @@ and the tau-K18 force-field benchmark.
 *Representative snapshots of 60-chain tau-K32 condensates for the seven modification states. Rectangles
 mark the initial slab boundary. The fully phosphorylated and fully acetylated condensates contract into
 denser, narrower slabs, whereas the unmodified and sparsely modified condensates extend beyond it.*
+
+## Repository layout
+
+```
+analysis_files/   Jupyter notebooks for the analyses in the manuscript
+simulations/      GROMACS run parameters (.mdp) for the all-atom simulations
+images/           Figures used in this README
+```
+
+## Simulations
+
+We provide the GROMACS run parameters for both simulation systems: the single-chain simulations
+and the condensate simulations. All runs are all-atom, at 300 K, with modified TIP3P water
+(`-DUSE_MODIFIED_TIP3P_EPS`).
+
+**`simulations/run_para_single_chain/`**: isolated tau-K32 chains
+
+| File | Step |
+|---|---|
+| `minim.mdp` | Steepest-descent energy minimisation |
+| `nvt.mdp` | NVT equilibration, protein position-restrained (100 ps) |
+| `npt.mdp` | NPT equilibration, protein position-restrained (250 ps) |
+| `npt_no_retraints.mdp` | NPT equilibration without restraints (250 ps) |
+| `md_re.mdp` | Production MD, Parrinello-Rahman barostat (100 ns per run) |
+| `num_ions.py` | Number of ion pairs for a given water count and salt concentration: `python num_ions.py <n_waters> <conc_M>` |
+
+**`simulations/run_para_condensates/`**: 60-chain tau-K32 condensates (back-mapped from Martini
+coarse-grained slabs)
+
+| File | Step |
+|---|---|
+| `soft_npt.mdp` | Steepest-descent minimisation with soft-core interactions, to resolve clashes after back-mapping |
+| `soft_nvt.mdp` | Soft-core (free-energy) settings used with the step above |
+| `nvt.mdp` | NVT equilibration, protein position-restrained (1 fs steps, 50 ps) |
+| `npt.mdp` | NPT equilibration, protein position-restrained (250 ps) |
+| `npt_no_retraints.mdp` | NPT equilibration without restraints (250 ps) |
 
 ## Notebooks
 
