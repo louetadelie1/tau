@@ -5,7 +5,8 @@ Simulation inputs and analysis code for the manuscript:
 > **Tau phosphorylation and acetylation shift the balance between intramolecular and intermolecular interactions in condensates**
 > Adelie Louet, Jan F. M. Stuke, Lisa M. Pietrek, Michele Vendruscolo, Gerhard Hummer
 
-** Data availability**. Molecular dynamics trajectories of all single-chain and condensate simulations (protein coordinates, saved every 400 ps) are available on Zenodo at https://doi.org/10.5281/zenodo.24374170.
+## Data availability. 
+Molecular dynamics trajectories of all single-chain and condensate simulations (protein coordinates, saved every 400 ps) are available on Zenodo at https://doi.org/10.5281/zenodo.24374170.
 
 
 The notebooks analyse all-atom molecular dynamics simulations of the tau-K32 fragment in seven
